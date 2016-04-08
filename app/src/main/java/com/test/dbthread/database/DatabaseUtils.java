@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 
 /**
  * Created by salbury on 4/7/16.
+ *
+ * Used with DatabaseParams to execute custom statements
  */
 public class DatabaseUtils {
 

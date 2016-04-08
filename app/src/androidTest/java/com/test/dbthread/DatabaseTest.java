@@ -168,6 +168,10 @@ public class DatabaseTest extends AndroidTestCase {
     private int totalTasks = 100;
     private AtomicInteger tasksAlive = new AtomicInteger(totalTasks);
 
+    /*
+     * Creating a 100 threads that each insert/update 10 entries.
+     * Refer to UserDAO to see what transactions are taking place.
+     */
     public void testConcurrentAccess() {
         Log.v("DatabaseTest", "testConcurrentAccess");
 

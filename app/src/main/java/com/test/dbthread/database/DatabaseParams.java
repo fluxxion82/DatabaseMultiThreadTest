@@ -4,6 +4,8 @@ import android.content.ContentValues;
 
 /**
  * Created by salbury on 4/7/16.
+ *
+ * Used with DatabaseUtils to execute custom statements
  */
 public class DatabaseParams {
 
