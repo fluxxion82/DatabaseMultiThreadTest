@@ -36,7 +36,7 @@ public class DatabaseTest extends AndroidTestCase {
 
                 new UserDAO(database, getContext()).deleteAll();
 
-                databaseManager.closeDatabase();
+                //databaseManager.closeDatabase();
             }
         }).start();
 
@@ -69,7 +69,7 @@ public class DatabaseTest extends AndroidTestCase {
                     database.endTransaction();
                 }
 
-                databaseManager.closeDatabase();
+                //databaseManager.closeDatabase();
             }
         }).start();
 
@@ -115,7 +115,7 @@ public class DatabaseTest extends AndroidTestCase {
                     database.endTransaction();
                 }
 
-                databaseManager.closeDatabase();
+               // databaseManager.closeDatabase();
             }
         }).start();
     }
@@ -160,7 +160,7 @@ public class DatabaseTest extends AndroidTestCase {
                     database.endTransaction();
                 }
 
-                databaseManager.closeDatabase();
+                //databaseManager.closeDatabase();
             }
         }).start();
     }
@@ -189,7 +189,7 @@ public class DatabaseTest extends AndroidTestCase {
 
         List<User> listFromDB = dao.selectAll();
 
-        databaseManager.closeDatabase();
+        //databaseManager.closeDatabase();
 
         Assert.assertTrue("User list is empty", !listFromDB.isEmpty());
         Assert.assertTrue("User list size is wrong total=" + totalUsers + " list=" + listFromDB.size(), listFromDB.size() == totalUsers);
@@ -206,7 +206,7 @@ public class DatabaseTest extends AndroidTestCase {
                 int usersCount = 10;
                 dao.insert(generateTestUserList(usersCount, String.valueOf(tasksAlive.get())));
 
-                databaseManager.closeDatabase();
+                //databaseManager.closeDatabase();
 
                 Log.v("DatabaseTest", "Task #" + tasksAlive.get() + " is finished");
 
